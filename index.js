@@ -2,10 +2,9 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello, Docker CI/CD!');
+  res.send('Hello, Updated Docker CI/CD!');
 });
 
-// Only start the server if this file is run directly (not imported)
 if (require.main === module) {
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
@@ -13,4 +12,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = app; // Export the app for testing
+module.exports = app;
